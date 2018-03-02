@@ -1,0 +1,11 @@
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\bin\Debug\netcoreapp2.0\TMP.API.deps.json
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\bin\Debug\netcoreapp2.0\TMP.API.runtimeconfig.json
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\bin\Debug\netcoreapp2.0\TMP.API.runtimeconfig.dev.json
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\bin\Debug\netcoreapp2.0\TMP.API.dll
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\bin\Debug\netcoreapp2.0\TMP.API.pdb
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\obj\Debug\netcoreapp2.0\TMP.API.csprojResolveAssemblyReference.cache
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\obj\Debug\netcoreapp2.0\TMP.API.csproj.CoreCompileInputs.cache
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\obj\Debug\netcoreapp2.0\TMP.API.AssemblyInfoInputs.cache
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\obj\Debug\netcoreapp2.0\TMP.API.AssemblyInfo.cs
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\obj\Debug\netcoreapp2.0\TMP.API.dll
+C:\Users\LBW\source\repos\tiqri-mentoring-platform\Web\TMP.API\TMP.API\obj\Debug\netcoreapp2.0\TMP.API.pdb
