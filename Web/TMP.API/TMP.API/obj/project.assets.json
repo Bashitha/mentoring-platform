@@ -12543,11 +12543,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\LBW\\source\\repos\\tiqri-mentoring-platform\\Web\\TMP.API\\TMP.API\\TMP.API.csproj",
+      "projectUniqueName": "C:\\Users\\LBW\\source\\repos\\mentoring-platform\\Web\\TMP.API\\TMP.API\\TMP.API.csproj",
       "projectName": "TMP.API",
-      "projectPath": "C:\\Users\\LBW\\source\\repos\\tiqri-mentoring-platform\\Web\\TMP.API\\TMP.API\\TMP.API.csproj",
+      "projectPath": "C:\\Users\\LBW\\source\\repos\\mentoring-platform\\Web\\TMP.API\\TMP.API\\TMP.API.csproj",
       "packagesPath": "C:\\Users\\LBW\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LBW\\source\\repos\\tiqri-mentoring-platform\\Web\\TMP.API\\TMP.API\\obj\\",
+      "outputPath": "C:\\Users\\LBW\\source\\repos\\mentoring-platform\\Web\\TMP.API\\TMP.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
