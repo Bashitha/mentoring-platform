@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMP.API", "TMP.API\TMP.API.csproj", "{117CF782-F7FF-4E24-BA1A-583AC44CAD5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMP.API", "TMP.API\TMP.API.csproj", "{117CF782-F7FF-4E24-BA1A-583AC44CAD5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMP.ApplicationCore", "TMP.ApplicationCore\TMP.ApplicationCore.csproj", "{E1830430-E0CA-487B-88E9-8BEF93EFC3EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMP.ApplicationCore", "TMP.ApplicationCore\TMP.ApplicationCore.csproj", "{E1830430-E0CA-487B-88E9-8BEF93EFC3EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMP.Infrastructure", "TMP.Infrastructure\TMP.Infrastructure.csproj", "{3B2AB9E7-EB03-4AB5-A5A4-6506162226F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMP.Infrastructure", "TMP.Infrastructure\TMP.Infrastructure.csproj", "{3B2AB9E7-EB03-4AB5-A5A4-6506162226F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C490DCD4-7E88-4F5C-ADCE-60D93427CF91}"
 EndProject
