@@ -3,3 +3,27 @@
 ################################################################################
 
 /Web/MentoringPlatformApplication/Administration.API/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Administration.API/obj
+/Web/MentoringPlatformApplication/Administration.Domain/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Administration.Domain/obj
+/Web/MentoringPlatformApplication/Administration.Infrastructure/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Administration.Infrastructure/obj
+/Web/MentoringPlatformApplication/Collaboration.API/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Collaboration.API/obj
+/Web/MentoringPlatformApplication/Collaboration.Domain/obj
+/Web/MentoringPlatformApplication/Collaboration.Domain/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Collaboration.Infrastructure/obj
+/Web/MentoringPlatformApplication/Collaboration.Infrastructure/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.Infrastructure.Tests/obj
+/Web/MentoringPlatformApplication/Security.Infrastructure.Tests/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.Infrastructure/obj
+/Web/MentoringPlatformApplication/Security.Infrastructure/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.Domain.Tests/obj
+/Web/MentoringPlatformApplication/Security.Domain.Tests/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.Domain/obj
+/Web/MentoringPlatformApplication/Security.Domain/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.API.Tests/obj
+/Web/MentoringPlatformApplication/Security.API.Tests/bin/Debug/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.API/obj
+/Web/MentoringPlatformApplication/Security.API/bin/Debug/netcoreapp2.0
+
