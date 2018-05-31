@@ -2,7 +2,7 @@
 
 namespace Security.Domain
 {
-    public class Class1
+    public class UserRole
     {
     }
 }

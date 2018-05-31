@@ -1,0 +1,26 @@
+<div class="flex-container" >
+  <form #createUserForm="ngForm" (ngSubmit)="onSubmit(user)">
+      
+    <h3>Create User</h3>
+    <div class="form-group">
+      <input type="hidden"  [(ngModel)]="user.userId" name="userId" #userId="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" [(ngModel)]="user.email" name="email"#email="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control"  [(ngModel)]="user.password" name="pwd" #pwd="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="inputState">Role:</label>
+      <select class="form-control" [(ngModel)]="user.userRoleId" name="userRoleId" #userRoleId="ngModel">
+        <option *ngFor="let userRole of userRoles" [ngValue]="userRole.userRoleId">{{userRole.userRoleName}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+  

@@ -14,14 +14,14 @@ namespace Security.API.Controllers
         public IEnumerable<UserRole> Get()
         {
             var list = new List<UserRole>();
-            list.Add(new UserRole() {UserRoleId = 1, UserRoleName = "Admin"});
+            list.Add(new UserRole() { UserRoleId = 1, UserRoleName = "Admin"});
             list.Add(new UserRole() { UserRoleId = 2, UserRoleName = "Mentor" });
             list.Add(new UserRole() { UserRoleId = 3, UserRoleName = "Mentee" });
             return list;
         }
 
         // GET: api/UserRole/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
@@ -39,7 +39,7 @@ namespace Security.API.Controllers
         {
         }
         
-        // DELETE: api/ApiWithActions/5
+        // DELETE: api/UserRole/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

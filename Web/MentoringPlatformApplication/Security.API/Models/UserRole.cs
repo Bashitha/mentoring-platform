@@ -1,6 +1,4 @@
-﻿
-
-namespace Security.API.Models
+﻿namespace Security.API.Models
 {
     public class UserRole
     {
