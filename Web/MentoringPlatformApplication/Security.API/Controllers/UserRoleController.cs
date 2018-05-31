@@ -9,6 +9,7 @@ namespace Security.API.Controllers
     [Route("api/UserRole")]
     public class UserRoleController : Controller
     {
+
         // GET: api/UserRole
         [HttpGet]
         public IEnumerable<UserRole> Get()
