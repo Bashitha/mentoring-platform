@@ -12,16 +12,3 @@ build:
         cwd: Web/MentoringPlatformApplication
         code: |
           dotnet build
-    - script:
-        name: publish
-        cwd: Web/MentoringPlatformApplication
-        code: |
-          dotnet publish -c Release -o publish	 
-    - script:
-        name: chmod
-        cwd: Web/MentoringPlatformApplication
-        code: |
-          chmod +x ./docker_entrypoint.sh
-
-
-env: "ASPNETCORE_URLS=http://+:80"
