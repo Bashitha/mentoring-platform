@@ -1,8 +1,11 @@
-﻿namespace Security.API.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Security.Domain.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
-        public int UserId { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }
@@ -10,6 +13,6 @@
         public string Designation { get; set; }
         public string Description { get; set; }
         public int UserRoleId { get; set; }
-
+        public UserRole UserRole { get; set; }
     }
 }

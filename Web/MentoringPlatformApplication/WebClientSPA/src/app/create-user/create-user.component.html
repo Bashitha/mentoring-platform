@@ -17,7 +17,7 @@
     <div class="form-group">
       <label for="inputState">Role:</label>
       <select class="form-control" [(ngModel)]="user.userRoleId" name="userRoleId" #userRoleId="ngModel">
-        <option *ngFor="let userRole of userRoles" [ngValue]="userRole.userRoleId">{{userRole.userRoleName}}</option>
+        <option *ngFor="let userRole of userRoles" [ngValue]="userRole.id">{{userRole.userRoleName}}</option>
       </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

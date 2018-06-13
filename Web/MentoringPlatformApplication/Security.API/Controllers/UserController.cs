@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Mapster;
+using Microsoft.AspNetCore.Mvc;
 using Security.API.Models;
+using Security.Domain.Entities;
+using Security.Domain.IRepositories;
 using System.Collections.Generic;
 
 namespace Security.API.Controllers
@@ -8,17 +11,19 @@ namespace Security.API.Controllers
     [Route("api/User")]
     public class UserController : Controller
     {
-        List<User> list = new List<User>();
-        
+        private readonly IRepository<User> _userRepository;
+
+        public UserController(IRepository<User> userRepository)
+        {
+            _userRepository = userRepository;
+        }
+
         // GET: api/User
         [HttpGet]
         public IEnumerable<User> Get()
         {
-            list.Add(new User() { UserId = 1, Email = "lbw@tiqri.com", Password = "abc", FirstName = "Leshan", LastName = "Wijegunawardana", Description = ".Net", Designation = "SE", UserRoleId = 3 });
-            list.Add(new User() { UserId = 2, Email = "dtm@tiqri.com", Password = "abc", FirstName = "Dhanika", LastName = "Munasinghe", Description = ".Net", Designation = "SE", UserRoleId = 3 });
-            list.Add(new User() { UserId = 3, Email = "mvn@tiqri.com", Password = "abc", FirstName = "Mark", LastName = "Sinnathamby", Description = ".Net", Designation = "TL", UserRoleId = 1 });
-
-            return list;
+            
+            return null;
         }
 
         // GET: api/User/5
@@ -30,10 +35,12 @@ namespace Security.API.Controllers
 
         // POST: api/User
         [HttpPost]
-        public User Post([FromBody]User user)
+        public User Post([FromBody]UserViewModel userViewModel)
         {
-            list.Add(user);
-            return list[list.Count-1];
+            
+            var user = _userRepository.Add(userViewModel.Adapt<User>());
+
+            return user;
 
         }
 

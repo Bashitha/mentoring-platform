@@ -1,4 +1,5 @@
 export class UserRole {
-    userRoleId : number;
+    id : number;
     userRoleName : string;
+    userRoleDescription : string;
 }

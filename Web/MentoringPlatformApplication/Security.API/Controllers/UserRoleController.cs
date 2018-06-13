@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Security.API.Models;
-
+using Security.Domain.Entities;
+using Security.Domain.IRepositories;
 
 namespace Security.API.Controllers
 {
@@ -9,16 +11,22 @@ namespace Security.API.Controllers
     [Route("api/UserRole")]
     public class UserRoleController : Controller
     {
+        private readonly IRepository<UserRole> _userRoleRepository;
+
+        public UserRoleController(IRepository<UserRole> userRoleRepository)
+        {
+            _userRoleRepository = userRoleRepository;
+        }
+
+
 
         // GET: api/UserRole
         [HttpGet]
-        public IEnumerable<UserRole> Get()
+        public IEnumerable<UserRoleViewModel> Get()
         {
-            var list = new List<UserRole>();
-            list.Add(new UserRole() { UserRoleId = 1, UserRoleName = "Admin"});
-            list.Add(new UserRole() { UserRoleId = 2, UserRoleName = "Mentor" });
-            list.Add(new UserRole() { UserRoleId = 3, UserRoleName = "Mentee" });
-            return list;
+            var userRoles = _userRoleRepository.ListAll();
+
+            return userRoles.Adapt<List<UserRoleViewModel>>();
         }
 
         // GET: api/UserRole/5
@@ -30,8 +38,11 @@ namespace Security.API.Controllers
         
         // POST: api/UserRole
         [HttpPost]
-        public void Post([FromBody]string value)
+        public UserRole Post([FromBody]UserRoleViewModel userRoleViewModel)
         {
+            var userRole = _userRoleRepository.Add(userRoleViewModel.Adapt<UserRole>());
+
+            return userRole;
         }
         
         // PUT: api/UserRole/5

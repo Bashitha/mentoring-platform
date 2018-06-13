@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserRole } from '../models/userRole.model';
 import { User} from '../models/user.model';
+import { UserRoleService } from '../services/user-role.service';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -15,10 +16,10 @@ export class CreateUserComponent implements OnInit {
   user = new User();
   
 
-  constructor(private userService : UserService) { }
+  constructor(private userRoleService : UserRoleService, private userService : UserService) { }
 
   ngOnInit() {
-    this.userService.getUserRoles().subscribe(
+    this.userRoleService.getUserRoles().subscribe(
       userRoles => this.userRoles = userRoles);
   }
 

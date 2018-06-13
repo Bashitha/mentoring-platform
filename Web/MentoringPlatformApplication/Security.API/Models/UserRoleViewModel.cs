@@ -1,8 +1,8 @@
 ﻿namespace Security.API.Models
 {
-    public class UserRole
+    public class UserRoleViewModel
     {
-        public int UserRoleId { get; set; }
+        public int Id { get; set; }
         public string UserRoleName { get; set; }
         public string UserRoleDescription { get; set; }
         public string Status { get; set; }

@@ -1,0 +1,13 @@
+<div class="flex-container" >
+  <form #createUserRoleForm="ngForm" (ngSubmit)="onAdd(userRole)">
+    <h3>Create UserRole</h3>
+    <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" [(ngModel)]="userRole.userRoleName" placeholder="User Role" name="userRoleName" #userRoleName="ngModel"/>
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary">Add</button>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
