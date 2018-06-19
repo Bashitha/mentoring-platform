@@ -6,9 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using Security.Domain.IRepositories;
 using Security.Domain.Entities;
-using Security.Infrastructure.Data;
 
-namespace TIQRI.EMP.Infrastructure.Data
+namespace Security.Infrastructure.Data
 {
     public class EfRepository<T> : IRepository<T>, IAsyncRepository<T> where T : BaseEntity
     {
