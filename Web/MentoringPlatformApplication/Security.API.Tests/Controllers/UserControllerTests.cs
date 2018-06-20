@@ -5,27 +5,18 @@ using Security.Infrastructure.Data;
 using Security.API.Controllers;
 using Security.Domain.Entities;
 using Security.API.Models;
-
+using Security.TestsHelper;
 
 namespace Security.API.Tests.Controllers
 {
     [TestFixture]
     public class UserControllerTests
     {
-        private MentoringPlatformSecurityContext GetTestContext()
-        {
-            var options = new DbContextOptionsBuilder<MentoringPlatformSecurityContext>()
-                      .UseInMemoryDatabase(Guid.NewGuid().ToString())
-                      .Options;
-
-            return new MentoringPlatformSecurityContext(options);
-        }
-
         [Test]
         public void CreateUser_WhenNewUserAddedFromSecurityAdminScreen_NewUserShouldExistInSystem()
         {
             // Arrange
-            var testContext = GetTestContext();
+            var testContext = GetContextHelper.GetTestContext();
             var testUserRepository = new EfRepository<User>(testContext);
             var userController = new UserController(testUserRepository);
             var uniqueEmail = "unique321@test.com";
