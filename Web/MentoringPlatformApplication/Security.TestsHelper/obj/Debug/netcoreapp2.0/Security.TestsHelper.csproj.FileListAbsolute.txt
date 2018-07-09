@@ -4,7 +4,6 @@ C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Se
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\bin\Debug\netcoreapp2.0\Security.Infrastructure.dll
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\bin\Debug\netcoreapp2.0\Security.Infrastructure.pdb
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\bin\Debug\netcoreapp2.0\Security.Domain.pdb
-C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\obj\Debug\netcoreapp2.0\Security.TestsHelper.csprojResolveAssemblyReference.cache
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\obj\Debug\netcoreapp2.0\Security.TestsHelper.csproj.CoreCompileInputs.cache
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\obj\Debug\netcoreapp2.0\Security.TestsHelper.AssemblyInfoInputs.cache
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\obj\Debug\netcoreapp2.0\Security.TestsHelper.AssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Se
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\bin\Debug\netcoreapp2.0\Security.TestsHelper.pdb
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\obj\Debug\netcoreapp2.0\Security.TestsHelper.dll
 C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\obj\Debug\netcoreapp2.0\Security.TestsHelper.pdb
+C:\Users\LBW\source\repos\mentoring-platform\Web\MentoringPlatformApplication\Security.TestsHelper\obj\Debug\netcoreapp2.0\Security.TestsHelper.csprojAssemblyReference.cache
