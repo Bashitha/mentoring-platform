@@ -39,6 +39,7 @@ namespace Security.API.Controllers
                 return null;
 
             return user.Adapt<UserViewModel>();
+            
         }
 
         // POST: api/User
