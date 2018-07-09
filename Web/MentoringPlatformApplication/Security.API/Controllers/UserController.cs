@@ -63,6 +63,7 @@ namespace Security.API.Controllers
 
             _userRepository.Update(user);
             return Ok();
+
         }
 
         // DELETE: api/User/5
