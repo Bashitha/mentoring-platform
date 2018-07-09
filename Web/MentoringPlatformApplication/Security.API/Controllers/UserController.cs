@@ -45,12 +45,10 @@ namespace Security.API.Controllers
         // POST: api/User
         [HttpPost]
         public User Post([FromBody]UserViewModel userViewModel)
-        {
-            
+        {            
             var user = _userRepository.Add(userViewModel.Adapt<User>());
 
             return user;
-
         }
 
         // PUT: api/User/5
