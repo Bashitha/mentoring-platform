@@ -20,17 +20,25 @@ namespace Security.API.Controllers
 
         // GET: api/User
         [HttpGet]
-        public IEnumerable<User> Get()
+        public List<UserViewModel> Get()
         {
-            
-            return null;
+            var users = _userRepository.ListAll();
+
+            if (users == null)
+                return null;
+
+            return users.Adapt<List<UserViewModel>>();
         }
 
         // GET: api/User/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public UserViewModel Get(int id)
         {
-            return "value";
+            var user = _userRepository.GetById(id);
+            if (user == null)
+                return null;
+
+            return user.Adapt<UserViewModel>();
         }
 
         // POST: api/User
@@ -46,8 +54,16 @@ namespace Security.API.Controllers
 
         // PUT: api/User/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public ActionResult Put(int id, [FromBody]UserViewModel userViewModel)
         {
+            var user = _userRepository.GetById(id);
+
+            if (user == null)
+                return NotFound();
+
+            _userRepository.Update(user);
+            return Ok();
+
         }
 
         // DELETE: api/User/5
@@ -56,4 +72,5 @@ namespace Security.API.Controllers
         {
         }
     }
+
 }

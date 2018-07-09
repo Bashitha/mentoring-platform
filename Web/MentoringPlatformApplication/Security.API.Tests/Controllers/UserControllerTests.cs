@@ -36,6 +36,23 @@ namespace Security.API.Tests.Controllers
         }
 
         [Test]
+        public void GetUserById_WhenAuthenticatingExistingUser_ShouldReceiveCorrespondingUserFromId()
+        {
+            // Arrange
+            var testContext = GetContextHelper.GetTestContextWithData();
+            var testUserRepository = new EfRepository<User>(testContext);
+            var userController = new UserController(testUserRepository);
+            var userId = 1;
+
+            // Act
+            var user = userController.Get(userId);
+
+            // Assert
+            Assert.IsNotNull(user);
+            Assert.AreSame("Leshan", user.FirstName);
+        }
+
+        [Test]
         public void DefaultTestForEqualityCheck()
         {
             Assert.AreNotEqual(1, 2);
