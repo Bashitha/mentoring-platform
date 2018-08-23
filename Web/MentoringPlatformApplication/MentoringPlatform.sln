@@ -94,7 +94,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "environments", "environment
 		WebClientSPA\src\environments\environment.ts = WebClientSPA\src\environments\environment.ts
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.TestsHelper", "Security.TestsHelper\Security.TestsHelper.csproj", "{60F9B43A-6CAD-476B-9199-980797192639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security.TestsHelper", "Security.TestsHelper\Security.TestsHelper.csproj", "{60F9B43A-6CAD-476B-9199-980797192639}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
