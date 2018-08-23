@@ -14,6 +14,7 @@ export class CreateUserComponent implements OnInit {
   selectedValue = null;
   userRoles : UserRole[];
   user = new User();
+  title = "Signup";
   
 
   constructor(private userRoleService : UserRoleService, private userService : UserService) { }
@@ -37,6 +38,7 @@ export class CreateUserComponent implements OnInit {
     }
   }      
   onSubmit(user: User): void {
+    console.log(user);
     if (!user) { return; }
     this.userService.createUser(user)
       .subscribe(x => {

@@ -30,3 +30,7 @@
 
 /.vs/mentoring-platform/v15/.suo
 /Web/MentoringPlatformApplication/ClassLibrary1
+/Web/MentoringPlatformApplication/Security.API/bin/Release/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.Domain/bin/Release/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.Infrastructure/bin/Release/netcoreapp2.0
+/Web/MentoringPlatformApplication/Security.TestsHelper/obj/Release/netcoreapp2.0

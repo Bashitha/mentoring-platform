@@ -27,4 +27,13 @@ export class UserService {
       );
     }
 
+    loginUser (user: User): Observable<User> {
+      const url = this.baseUrl.hosturl + `/api/User/Login`;
+      console.log(user);
+      return this.http.post<User>(url, user, httpOptions).pipe(
+        tap((user: User) => console.log(`created user Id=${user.userId}`)),
+        catchError(this.errorService.handleError<User>('createUser'))
+      );
+    }
+
 }

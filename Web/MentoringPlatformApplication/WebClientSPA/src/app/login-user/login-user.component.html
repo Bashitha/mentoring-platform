@@ -1,0 +1,57 @@
+
+<!-- <mat-tab-group>
+  <mat-tab label="One">
+    <h1>Some tab content</h1>
+    <p>...</p>
+  </mat-tab>
+  <mat-tab label="Two">
+    <h1>Some more tab content</h1>
+    <p>...</p>
+  </mat-tab>
+</mat-tab-group> -->
+
+
+<mat-grid-list cols="3">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile class='login-element'>
+      <div class="login-container">
+        <div class="login-box-header">
+            {{title}}
+        </div>
+        <div class="login-box-body">
+          <form #loginUserForm="ngForm" (ngSubmit)="onSubmit(user)">
+            <mat-grid-list cols="9" rowHeight="100px">
+              <mat-grid-tile [rowspan]="1" class="login-icon">
+                <mat-icon>lock</mat-icon>
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="7">
+                <mat-input-container class="justifier">
+                    <input matInput placeholder="Email" type="email"[(ngModel)]="user.email" name="email"#email="ngModel">
+                </mat-input-container>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <mat-grid-list cols="9" rowHeight="100px">
+              <mat-grid-tile [rowspan]="1"  class="login-icon">
+                <mat-icon>remove_red_eye</mat-icon>
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="7">
+                <mat-input-container class="justifier">
+                  <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="pwd" #pwd="ngModel">
+                </mat-input-container>
+              </mat-grid-tile>
+            </mat-grid-list>  
+              
+            <button mat-raised-button class="login-button"> 
+              <mat-icon>input</mat-icon> Login
+            </button>
+          </form>
+  
+        </div>
+          
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+   
+  </mat-grid-list>
+  
+  

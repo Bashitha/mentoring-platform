@@ -6,6 +6,7 @@ using Security.API.Controllers;
 using Security.Domain.Entities;
 using Security.API.Models;
 using Security.TestsHelper;
+using Security.Infrastructure.Data.Repositories;
 
 namespace Security.API.Tests.Controllers
 {
@@ -17,7 +18,7 @@ namespace Security.API.Tests.Controllers
         {
             // Arrange
             var testContext = GetContextHelper.GetTestContext();
-            var testUserRepository = new EfRepository<User>(testContext);
+            var testUserRepository = new UserRepository(testContext);
             var userController = new UserController(testUserRepository);
             var uniqueEmail = "unique321@test.com";
 
@@ -40,7 +41,7 @@ namespace Security.API.Tests.Controllers
         {
             // Arrange
             var testContext = GetContextHelper.GetTestContextWithData();
-            var testUserRepository = new EfRepository<User>(testContext);
+            var testUserRepository = new UserRepository(testContext);
             var userController = new UserController(testUserRepository);
             var userId = 1;
 
