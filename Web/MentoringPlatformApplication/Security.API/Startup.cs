@@ -13,6 +13,7 @@ using System;
 using System.Text;
 using Security.API.Utility;
 using Security.Infrastructure.Data.Repositories;
+using Security.Domain.Entities;
 
 namespace Security.API
 {
@@ -75,7 +76,7 @@ namespace Security.API
             // api user claim policy
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("ApiUser", policy => policy.RequireClaim(Constants.Strings.JwtClaimIdentifiers.Rol, Constants.Strings.JwtClaims.ApiAccess));
+                options.AddPolicy("Mentor", policy => policy.RequireClaim(Constants.Strings.JwtClaimIdentifiers.Rol, Constants.Strings.JwtClaims.Mentor));
             });
             services.AddCors(options =>
             {
@@ -91,6 +92,7 @@ namespace Security.API
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
             services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            services.AddScoped(typeof(IRepository<UserRole>), typeof(EfRepository<UserRole>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

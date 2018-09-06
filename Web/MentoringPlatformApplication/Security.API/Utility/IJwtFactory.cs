@@ -10,6 +10,6 @@ namespace Security.API.Utility
     {
         Task<string> GenerateEncodedToken(string userName, ClaimsIdentity identity);
 
-        ClaimsIdentity GenerateClaimsIdentity(string userName, string id);
+        ClaimsIdentity GenerateClaimsIdentity(string userName, string id, string userRoleName);
     }
 }

@@ -16,7 +16,8 @@ namespace Security.API.Utility
 
             public static class JwtClaims
             {
-                public const string ApiAccess = "api_access";
+                public const string Mentor = "mentor";
+                public const string Mentee = "mentee";
             }
         }
     }

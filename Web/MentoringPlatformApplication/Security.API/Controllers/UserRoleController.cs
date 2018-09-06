@@ -31,9 +31,9 @@ namespace Security.API.Controllers
 
         // GET: api/UserRole/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public UserRoleViewModel Get(int id)
         {
-            return "value";
+            return _userRoleRepository.GetById(id).Adapt<UserRoleViewModel>();
         }
         
         // POST: api/UserRole
