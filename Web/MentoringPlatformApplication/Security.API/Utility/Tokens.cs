@@ -10,7 +10,7 @@ namespace Security.API.Utility
 {
     public class Tokens
     {
-        public static async Task<string> GenerateJwt(ClaimsIdentity identity, IJwtFactory jwtFactory, string userName, JwtIssuerOptions jwtOptions)
+        public static async Task<object> GenerateJwt(ClaimsIdentity identity, IJwtFactory jwtFactory, string userName, JwtIssuerOptions jwtOptions)
         {
             var response = new
             {
@@ -18,7 +18,10 @@ namespace Security.API.Utility
                 auth_token = await jwtFactory.GenerateEncodedToken(userName, identity),
                 expires_in = (int)jwtOptions.ValidFor.TotalSeconds
             };
-            return JsonConvert.SerializeObject(response);
+            return response;
+            
+            //var result = JsonConvert.SerializeObject(response);
+            //return result;
         }
     }
 }

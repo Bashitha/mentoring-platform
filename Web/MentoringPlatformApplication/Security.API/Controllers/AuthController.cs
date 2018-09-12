@@ -46,7 +46,8 @@ namespace Security.API.Controllers
             }
 
             var jwt = await Tokens.GenerateJwt(identity, _jwtFactory, credentials.Email, _jwtOptions);
-            return new OkObjectResult(jwt);
+            return new JsonResult(jwt);
+            //return new OkObjectResult(jwt);
         }
 
         private async Task<ClaimsIdentity> GetClaimsIdentity(string email, string password)
