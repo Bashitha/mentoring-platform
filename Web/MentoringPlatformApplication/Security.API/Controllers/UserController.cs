@@ -1,6 +1,7 @@
 ﻿using Mapster;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -16,6 +17,7 @@ using System.Threading.Tasks;
 namespace Security.API.Controllers
 {
     [Produces("application/json")]
+    [Authorize(Policy = "Mentor")]
     [Route("api/User")]
     public class UserController : Controller
     {

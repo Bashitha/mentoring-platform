@@ -18,12 +18,14 @@ namespace Security.API.Controllers
     public class AuthController : Controller
     {
         private readonly IUserRepository _userRepository;
+        private readonly IRepository<UserRole> _userRoleRepository;
         private readonly IJwtFactory _jwtFactory;
         private readonly JwtIssuerOptions _jwtOptions;
 
-        public AuthController(IUserRepository userRepository, IJwtFactory jwtFactory, IOptions<JwtIssuerOptions> jwtOptions)
+        public AuthController(IUserRepository userRepository, IRepository<UserRole> userRoleRepository, IJwtFactory jwtFactory, IOptions<JwtIssuerOptions> jwtOptions)
         {
             _userRepository = userRepository;
+            _userRoleRepository = userRoleRepository;
             _jwtFactory = jwtFactory;
             _jwtOptions = jwtOptions.Value;
         }
@@ -43,8 +45,9 @@ namespace Security.API.Controllers
                 return BadRequest(Errors.AddErrorToModelState("login_failure", "Invalid username or password.", ModelState));
             }
 
-            var jwt = await Tokens.GenerateJwt(identity, _jwtFactory, credentials.Email, _jwtOptions, new JsonSerializerSettings { Formatting = Formatting.Indented });
-            return new OkObjectResult(jwt);
+            var jwt = await Tokens.GenerateJwt(identity, _jwtFactory, credentials.Email, _jwtOptions);
+            return new JsonResult(jwt);
+            //return new OkObjectResult(jwt);
         }
 
         private async Task<ClaimsIdentity> GetClaimsIdentity(string email, string password)
@@ -58,14 +61,15 @@ namespace Security.API.Controllers
 
                 // get the user to verifty
             var userToVerify = _userRepository.GetByEmail(email);
-            var userPassword = System.Text.ASCIIEncoding.ASCII.GetString(System.Convert.FromBase64String(userToVerify?.Password));//CommonHelper.Base64Decode(userToVerify?.Password);
+            var encodedPassword = CommonHelper.Base64Encode(password);//System.Text.ASCIIEncoding.ASCII.GetString(System.Convert.FromBase64String(userToVerify?.Password));
 
             if (userToVerify == null) return await Task.FromResult<ClaimsIdentity>(null);
 
             // check the credentials
-            if (userPassword == password)
+            if (encodedPassword == userToVerify?.Password)
             {
-                return await Task.FromResult(_jwtFactory.GenerateClaimsIdentity(email, userToVerify.Id.ToString()));
+                var userRole = _userRoleRepository.GetById(userToVerify.UserRoleId);
+                return await Task.FromResult(_jwtFactory.GenerateClaimsIdentity(email, userToVerify.Id.ToString(), userRole.UserRoleName));
             }
 
             // Credentials are invalid, or account doesn't exist
