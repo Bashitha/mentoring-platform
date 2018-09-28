@@ -12,3 +12,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+# Publish Test Results to Azure Pipelines/TFS
+- task: PublishTestResults@2
+  inputs:
+    #testResultsFormat: 'NUnit' # Options: JUnit, NUnit, VSTest, xUnit
+    #testResultsFiles: '**/TEST-*.xml' 
