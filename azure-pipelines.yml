@@ -13,6 +13,9 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+- script: nunit-console nunit.tests.dll
+  displayName: 'NUnit Console - Running Tests'
+
 # Publish Test Results to Azure Pipelines/TFS
 - task: PublishTestResults@2
   inputs:
